@@ -1,0 +1,24 @@
+@import './base.css';
+@import './styles/reset.scss';
+@import './styles/basic.scss';
+@import './styles/variable.scss';
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-area-padding {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+svg {
+  &.icon {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.nuxt-icon svg {
+  width: 1em;
+  height: inherit;
+  vertical-align: middle;
+  display: inline-block;
+}
