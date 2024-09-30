@@ -1,0 +1,21 @@
+{
+  "name": "good.news",
+  "short_name": "good.news",
+  "start_url": "/",
+  "background_color": "#fff",
+  "scope": "/",
+  "theme_color": "#fff",
+  "display": "standalone",
+  "icons":[
+    {
+      "src": "/images/AppIcon_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/AppIcon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

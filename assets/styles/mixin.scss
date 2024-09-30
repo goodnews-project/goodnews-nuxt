@@ -1,0 +1,29 @@
+// 断点配置列表
+$breakpoints: (
+  'phone': (
+    320px,
+    1023px
+  ),
+  'desktop': 1024px
+);
+@mixin respond($breakname) {
+  // 读取断点列表中对应断点的值
+  $bp: map-get($breakpoints, $breakname);
+  // 类型判断是否为数组
+  @if type-of($value: $bp) == 'list' {
+    // 取出数组中的值
+    $min: nth($bp, 1);
+    $max: nth($bp, 2);
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if type-of($value: $bp) == 'number' {
+    // 取$bp作为最大或者最小值即可
+    @media (min-width: $bp) {
+      @content;
+    }
+  } @else {
+    // 不可用断点提示
+    @warn "`$breakname` is not a valid breakpoint name.";
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "build:cfpage": "nuxt build --dotenv .env.prod --preset=cloudflare_pages",
+    "dev": "nuxt dev --host 0.0.0.0 --dotenv .env.development",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@arco-design/web-vue": "^2.55.2",
+    "@iconify/vue": "^4.1.2",
+    "@nuxt/image": "^1.7.0",
+    "@nuxtjs/i18n": "^8.3.1",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@pinia/nuxt": "^0.5.1",
+    "@tanstack/vue-query": "^5.40.0",
+    "@uniswap/sdk-core": "^5.3.1",
+    "@uniswap/v2-sdk": "^4.4.1",
+    "@vant/nuxt": "^1.0.4",
+    "@vueuse/core": "^10.10.0",
+    "@vueuse/nuxt": "^10.10.0",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "arco-design-nuxt-module": "^0.1.0",
+    "big.js": "^6.2.1",
+    "dayjs": "^1.11.11",
+    "dayjs-nuxt": "^2.1.9",
+    "hls.js": "^1.5.15",
+    "js-cookie": "^3.0.5",
+    "mitt": "^3.0.1",
+    "nuxt": "^3.13.2",
+    "nuxt-icon": "^0.6.10",
+    "nuxt-icons": "^3.2.1",
+    "pinia": "^2.1.7",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "uuid": "^9.0.1",
+    "vant": "^4.9.0",
+    "vue": "^3.5.6",
+    "vue-router": "^4.3.2",
+    "vue-tippy": "^6.4.1",
+    "worker-plugin": "^5.0.1"
+  },
+  "devDependencies": {
+    "fast-blurhash": "^1.1.2",
+    "nuxt-proxy-request": "^1.10.0",
+    "sass": "^1.77.3"
+  }
+}
