@@ -315,13 +315,6 @@ const handleChange = (key: string | number) => {
   flex-direction: column;
   align-items: flex-start;
 }
-:deep(.arco-input-wrapper) {
-  background: #fff;
-  border: 1px solid #dcdfe6;
-}
-:deep(.arco-textarea) {
-  background: #fff;
-}
 
 .pages {
   padding: 55px 25px;
@@ -375,7 +368,7 @@ const handleChange = (key: string | number) => {
       cursor: pointer;
       transition: all 0.3s;
       &:hover {
-        color: #1890ff;
+        color: var(--arcoblue-6);
         text-decoration: underline;
       }
     }

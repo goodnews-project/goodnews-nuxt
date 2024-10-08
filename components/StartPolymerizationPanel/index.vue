@@ -184,7 +184,7 @@ const activeMonth = computed(() => {
   }
 
   .statistics-form {
-    --line-color: #c0cdd9;
+    --line-color: var(--color-neutral-3);
     display: flex;
     width: 100%;
     gap: 10px;
@@ -270,7 +270,7 @@ const activeMonth = computed(() => {
         width: 2.5rem;
         height: 2.5rem;
         margin-right: 0.75rem;
-        background-color: #8c8dff;
+        background-color: var(--arcoblue-6);
         border-radius: 50%;
 
         display: flex;
@@ -286,7 +286,7 @@ const activeMonth = computed(() => {
 }
 .startFeature-frame {
   width: 100%;
-  background-color: #fff;
+  background-color: var(--color-background);
   border-radius: 10px;
   box-sizing: border-box;
   .header {
@@ -332,12 +332,12 @@ const activeMonth = computed(() => {
   .startFeature-title {
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: var(--color-text-1);
     margin-bottom: 20px;
   }
   .startFeature-content {
     font-size: 14px;
-    color: #666;
+    color: var(--color-text-3);
     line-height: 1.5;
     a {
       text-decoration: underline;
@@ -407,21 +407,6 @@ const activeMonth = computed(() => {
           color: #666;
         }
       }
-    }
-  }
-  .startFeature-btn {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 4px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    color: #333;
-    cursor: pointer;
-    margin-top: 20px;
-    &:hover {
-      background-color: #f5f5f5;
     }
   }
   .noLogin-btn_knowMore {

@@ -104,7 +104,7 @@ const toVote = async (e) => {
   gap: 10px;
   margin-bottom: 10px;
   --height: 32px;
-  --line-bg-color: #1d9bf0;
+  --line-bg-color: var(--arcoblue-6);
   --line-width: 5px;
   .vote-item {
     height: var(--height);
@@ -143,7 +143,7 @@ const toVote = async (e) => {
       }
     }
     &.disabled {
-      --line-bg-color: #cfd9de;
+      --line-bg-color: var(--color-neutral-3);
       // 禁止点击
       pointer-events: none;
     }
@@ -158,9 +158,9 @@ const toVote = async (e) => {
     }
     .target-item {
       flex: 1;
-      border: 1px solid rgb(29, 155, 240);
+      border: 1px solid var(--arcoblue-6);
       border-radius: 100px;
-      color: rgb(29, 155, 240);
+      color: var(--arcoblue-6);
       text-align: center;
       height: var(--height);
       line-height: var(--height);
@@ -171,7 +171,7 @@ const toVote = async (e) => {
       text-overflow: ellipsis;
       padding: 0 10px;
       &:hover {
-        background-color: rgba($color: rgb(29, 155, 240), $alpha: 0.2);
+        background-color: rgba($color: var(--arcoblue-6), $alpha: 0.2);
       }
     }
   }

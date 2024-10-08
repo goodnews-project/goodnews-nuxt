@@ -107,7 +107,7 @@ const onClickLeft = () => router.back();
   flex-direction: column;
   .user-info {
     padding: 0 20px;
-    border-bottom: 1px solid #e1e8ed;
+    border-bottom: 1px solid var(--color-neutral-3);
     height: 60px;
     flex-shrink: 0;
     display: flex;
@@ -146,7 +146,7 @@ const onClickLeft = () => router.back();
           padding: 10px;
           border-radius: 50px;
           border-bottom-left-radius: 10px;
-          background-color: #e6e6e6;
+          background-color: var(--color-neutral-1);
         }
         .time {
           color: inherit;
@@ -168,7 +168,7 @@ const onClickLeft = () => router.back();
     }
   }
   .input-frame {
-    border-top: 1px solid #e1e8ed;
+    border-top: 1px solid var(--color-neutral-3);
     height: 60px;
     width: 100%;
     display: flex;

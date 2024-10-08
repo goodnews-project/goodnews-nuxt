@@ -423,7 +423,7 @@ const domain = computed(() => {
   font-weight: 700;
   font-size: 15px;
   &.red {
-    color: #d03050;
+    color: var(--color-danger-6);
   }
   .icon-box {
     font-size: 20px;

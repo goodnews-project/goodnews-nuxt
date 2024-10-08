@@ -167,16 +167,16 @@ getDashboardDataAsync();
     margin-right: 10px;
     .header {
       font-weight: bolder;
-      color: #282c37;
+      color: var(--color-text-1);
       padding-bottom: 8px;
       margin-bottom: 8px;
-      border-bottom: 1px solid #c0cdd9;
+      border-bottom: 1px solid var(--color-neutral-3);
     }
 
     .card-item {
       padding: 10px;
       min-height: 40px;
-      border-bottom: 1px solid #ccd7e0;
+      border-bottom: 1px solid var(--color-neutral-3);
       display: flex;
       align-items: center;
       display: flex;
@@ -192,7 +192,7 @@ getDashboardDataAsync();
           width: 8px;
           height: 8px;
           border-radius: 50%;
-          background: #6364ff;
+          background: var(--arcoblue-6);
           opacity: 0.8;
           margin-right: 10px;
         }

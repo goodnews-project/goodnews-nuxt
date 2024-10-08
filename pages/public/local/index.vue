@@ -230,7 +230,7 @@ const tabList = [
 
 .tab-nav {
   width: 100%;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--color-neutral-3);
   line-height: 36px;
   display: none;
   .nav-item {
@@ -245,7 +245,7 @@ const tabList = [
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     .item-text {
-      color: #536471;
+      color: var(--color-text-2);
       width: 100%;
       text-align: center;
       height: 40px;
@@ -270,7 +270,7 @@ const tabList = [
         transform: translateX(-50%);
       }
       .item-text {
-        color: #0f1419;
+        color: var(--color-text-1);
       }
     }
   }

@@ -77,10 +77,9 @@ const goHref = (url) => {
       align-items: center;
       justify-content: center;
       font-size: 38px;
-      border-right: 1px solid rgb(229 231 235 / var(--tw-border-opacity));
-      // p-4 bg-[#f7f9f9]
+      border-right: 1px solid var(--color-neutral-3);
       padding: 16px;
-      background: #f7f9f9;
+      background: var(--color-neutral-2);
     }
   }
 }

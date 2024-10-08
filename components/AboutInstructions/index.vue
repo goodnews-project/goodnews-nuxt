@@ -89,7 +89,7 @@ const linkList = ref([
   height: 140px;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--color-neutral-3);
   box-shadow: 0px 8px 40px 0px #00000014;
   img {
     width: 100%;
