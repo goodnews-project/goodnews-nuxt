@@ -98,6 +98,10 @@ export default defineNuxtConfig({
     },
   },
 
+  experimental: {
+    inlineSSRStyles: false, // 或用于确定内联的函数
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -108,7 +112,7 @@ export default defineNuxtConfig({
     },
     plugins: [ViteWorkerPlugin()],
     build: {
-      // 提取css
+      sourcemap: import.meta.env.VITE_ENV !== 'prod', // 生产环境禁用map
       rollupOptions: {
         output: {
           manualChunks(id) {
