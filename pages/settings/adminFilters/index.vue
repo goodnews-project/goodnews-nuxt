@@ -144,7 +144,7 @@ getFiltersAsync();
         }
       }
       .icon {
-        color: #4a905f;
+        color: var(--success-1);
         width: 40px;
         height: 40px;
       }

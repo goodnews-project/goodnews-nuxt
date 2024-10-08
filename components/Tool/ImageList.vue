@@ -161,7 +161,7 @@ watchEffect(() => {
       border-radius: 10px;
       overflow: hidden;
       position: relative;
-      background-color: #d7d7d7;
+      background-color: var(--color-neutral-2);
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: center;
@@ -180,7 +180,7 @@ watchEffect(() => {
         right: 5px;
         top: 5px;
         border-radius: 4px;
-        background: rgba($color: #000000, $alpha: 0.25);
+        background: var(--color-neutral-2);
         color: #fff;
         cursor: pointer;
         width: 26px;
@@ -190,13 +190,13 @@ watchEffect(() => {
         justify-content: center;
         transition: all 0.3s;
         &:hover {
-          background-color: rgba($color: #000000, $alpha: 0.65);
+          background: var(--color-neutral-1);
         }
       }
       .percent {
         position: absolute;
         inset: 0;
-        background-color: rgba($color: #000000, $alpha: 0.75);
+        background-color: var(--color-neutral-2);
         background-blend-mode: multiply;
         display: flex;
         align-items: center;

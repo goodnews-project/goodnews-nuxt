@@ -175,10 +175,9 @@ const closeTrigger = () => {
 // 搜索列表
 .message-container {
   .container {
-    background: #fff;
+    background: var(--color-background);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     .user-list {
-      // max-height: 500px;
       padding: 10px 0;
       overflow-y: auto;
       .user-item {
@@ -238,17 +237,17 @@ const closeTrigger = () => {
       border-top: 1px solid var(--color-neutral-3);
     }
     &:hover {
-      background-color: #f7f9fa;
+      background-color: var(--color-neutral-1);
     }
     &.active {
       position: relative;
-      background: #f7f9f9;
+      background: var(--color-neutral-1);
       &::before {
         content: ' ';
         display: block;
         width: 2px;
         height: 100%;
-        background: #1d9bf0;
+        background: var(--arcoblue-6);
         position: absolute;
         right: 0;
         top: 0;

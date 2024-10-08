@@ -260,7 +260,7 @@ const handleCancel = async () => {
   display: flex;
   height: 60px;
   background-color: #fff;
-  border-bottom: 1px solid #d9e1e8;
+  border-bottom: 1px solid var(--color-border-2);
   z-index: 3;
   display: flex;
   align-items: center;
@@ -291,7 +291,7 @@ const handleCancel = async () => {
 .wrapper {
   display: flex;
   .sidebar-wrapper {
-    border-right: 1px solid #ebeef5;
+    border-right: 1px solid var(--color-border-2);
     .sidebar-wrapper__inner {
       padding-left: 200px;
       overflow-y: auto;

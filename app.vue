@@ -27,6 +27,19 @@ onMounted(() => {
 });
 
 onMounted(async () => {
+  // 深色模式
+  const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+  const prefersDarkMode = darkThemeMq.matches;
+  if (prefersDarkMode) {
+    document.body.setAttribute('arco-theme', 'dark');
+  }
+  darkThemeMq.addListener((e) => {
+    if (e.matches) {
+      document.body.setAttribute('arco-theme', 'dark');
+    } else {
+      document.body.removeAttribute('arco-theme');
+    }
+  });
   await nextTick();
 
   const script = document.createElement('script');

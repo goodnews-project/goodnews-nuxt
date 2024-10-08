@@ -459,7 +459,7 @@ const toggleNotify = async (notify: number) => {
             border-radius: 3px;
             font-size: 12px;
             font-weight: 500;
-            color: var(--user-role-accent, #282c37);
+            color: var(--color-text-1);
             border: 1px solid rgb(var(--gray-6));
             color: rgb(var(--gray-6));
             display: flex;
@@ -539,7 +539,7 @@ const toggleNotify = async (notify: number) => {
 
 .tab-nav {
   width: 100%;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--color-neutral-3);
   line-height: 36px;
   display: flex;
 
@@ -556,7 +556,7 @@ const toggleNotify = async (notify: number) => {
     border-top-right-radius: 5px;
 
     .item-text {
-      color: #536471;
+      color: var(--color-text-2);
       width: 100%;
       text-align: center;
       height: 40px;
@@ -584,54 +584,9 @@ const toggleNotify = async (notify: number) => {
       }
 
       .item-text {
-        color: #0f1419;
+        color: var(--color-text-1);
       }
     }
-  }
-}
-
-// 打赏弹窗
-.reward-basic {
-  padding: 10px;
-  background-color: var(--color-bg-popup);
-  margin-top: 10px;
-  gap: 12px;
-  border-radius: 10px;
-  border: 0.5px solid var(--Border, #00000029);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  box-shadow: 0px 8px 40px 0px #00000014;
-  .nav {
-    display: flex;
-    gap: 10px;
-    .nav-item {
-      --border-colore: #00000029;
-      --back-color: #fff;
-      --font-color: #000000;
-      padding: 4px 12px;
-      text-align: center;
-      border-radius: 5px;
-      border: 1px solid var(--border-colore, #00000029);
-      background: var(--back-color, #fff);
-      color: var(--font-color, #000000);
-      cursor: pointer;
-      transition: all 0.3s ease-out;
-      &:hover {
-        --back-color: rgb(var(--arcoblue-1));
-      }
-      &.active {
-        --border-colore: rgb(var(--arcoblue-6));
-        --back-color: rgb(var(--arcoblue-1));
-        --font-color: rgb(var(--arcoblue-6));
-      }
-    }
-  }
-  .input-wrap {
-    flex: 1;
-    flex-shrink: 0;
-    width: 100%;
-    overflow: hidden;
   }
 }
 

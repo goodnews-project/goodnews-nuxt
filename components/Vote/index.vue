@@ -183,7 +183,7 @@ defineExpose({
       padding: 10px;
       padding-bottom: 0;
       font-size: 14px;
-      color: #0f1419;
+      color: var(--color-text-1);
     }
   }
   // 移除按钮
@@ -195,10 +195,10 @@ defineExpose({
     align-items: center;
     justify-content: center;
     border-top: 1px solid var(--color-neutral-4);
-    color: #ff0000;
+    color: rgb(var(--danger-6));
     cursor: pointer;
     &:hover {
-      background: rgba($color: #ff0000, $alpha: 0.1);
+      background: rgba(var(--danger-1), 0.5);
     }
     button {
       // 重置样式
