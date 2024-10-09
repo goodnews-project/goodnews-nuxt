@@ -25,19 +25,23 @@ const useClientCss = () => {
 onMounted(() => {
   useClientCss();
 });
-
+const isDark = ref(false);
+provide('isDark', isDark);
 onMounted(async () => {
   // 深色模式
   const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
   const prefersDarkMode = darkThemeMq.matches;
   if (prefersDarkMode) {
     document.body.setAttribute('arco-theme', 'dark');
+    isDark.value = true;
   }
   darkThemeMq.addListener((e) => {
     if (e.matches) {
       document.body.setAttribute('arco-theme', 'dark');
+      isDark.value = true;
     } else {
       document.body.removeAttribute('arco-theme');
+      isDark.value = false;
     }
   });
   await nextTick();

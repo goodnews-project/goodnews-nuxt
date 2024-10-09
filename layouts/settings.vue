@@ -175,13 +175,14 @@ const handleCancel = async () => {
   console.log('handleCancel run');
   visible.value = false;
 };
+const { logo } = useLogo();
 </script>
 
 <template>
   <div class="wrapper">
     <header class="nav-tab">
       <div class="logo icon-logo" @click="goHome">
-        <img src="/images/logo.png" alt="" />
+        <img :src="logo" alt="" />
       </div>
       <div class="btn-box">
         <a-button @click="showMenu()">
@@ -259,7 +260,7 @@ const handleCancel = async () => {
   height: 60px;
   display: flex;
   height: 60px;
-  background-color: #fff;
+  background-color: var(--color-background);
   border-bottom: 1px solid var(--color-border-2);
   z-index: 3;
   display: flex;
@@ -281,7 +282,7 @@ const handleCancel = async () => {
   position: fixed;
   inset: 0;
   z-index: 2;
-  background-color: #fff;
+  background-color: var(--color-background);
   padding-top: 60px;
   display: none;
   .menu-item {

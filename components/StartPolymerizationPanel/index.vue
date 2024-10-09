@@ -179,7 +179,7 @@ const activeMonth = computed(() => {
   .title {
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: var(--color-text-1);
     margin-bottom: 20px;
   }
 
@@ -238,16 +238,16 @@ const activeMonth = computed(() => {
             .user-name {
               font-weight: bold;
               font-size: 14px;
-              color: #333;
+              color: var(--color-text-1);
             }
             .user-desc {
               font-size: 12px;
-              color: #666;
+              color: var(--color-text-2);
             }
           }
         }
         .text-value {
-          color: #333;
+          color: var(--color-text-1);
           font-weight: bold;
         }
       }
@@ -261,7 +261,7 @@ const activeMonth = computed(() => {
       padding: 10px 20px;
     }
     .wrap {
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid var(--color-border-1);
       padding: 16px 16px 16px 0;
       display: flex;
       justify-content: center;
@@ -387,24 +387,24 @@ const activeMonth = computed(() => {
             white-space: nowrap;
             .user-name {
               font-size: 14px;
-              color: #333;
+              color: var(--color-text-1);
               width: 100%;
               overflow: hidden;
               text-overflow: ellipsis;
             }
             .user-desc {
               font-size: 12px;
-              color: #666;
+              color: var(--color-text-2);
             }
           }
         }
         .text-value {
           font-size: 14px;
-          color: #333;
+          color: var(--color-text-1);
         }
         .text-desc {
           font-size: 12px;
-          color: #666;
+          color: var(--color-text-2);
         }
       }
     }

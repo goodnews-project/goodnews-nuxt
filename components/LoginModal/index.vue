@@ -39,6 +39,7 @@ watchEffect(() => {
     loginModalStore.openLoginModal();
   }
 });
+const { logo } = useLogo();
 </script>
 
 <template>
@@ -54,7 +55,7 @@ watchEffect(() => {
     <template #title></template>
     <div class="modal-content">
       <div class="logo">
-        <img src="/images/logo.png" alt="" />
+        <img :src="logo" alt="" />
       </div>
       <loginForm v-model="modalType" v-if="modalType === 'login'"></loginForm>
       <forgetForm v-model="modalType" v-if="modalType === 'forget'"></forgetForm>

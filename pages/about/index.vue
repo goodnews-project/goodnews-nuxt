@@ -181,19 +181,19 @@ const renderImg = computed(() => {
             .user-name {
               font-weight: bold;
               font-size: 14px;
-              color: #333;
+              color: var(--color-text-1);
               cursor: pointer;
             }
 
             .user-desc {
               font-size: 12px;
-              color: #666;
+              color: var(--color-text-2);
             }
           }
         }
 
         .text-value {
-          color: #333;
+          color: var(--color-text-1);
           font-weight: bold;
         }
       }
@@ -209,7 +209,7 @@ const renderImg = computed(() => {
     }
 
     .wrap {
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid var(--color-border-1);
       padding: 16px 16px 16px 0;
       display: flex;
       justify-content: center;

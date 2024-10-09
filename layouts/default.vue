@@ -361,17 +361,7 @@ const mobileFooterList = computed(() => {
 const backTopTarget = (e) => {
   if (!showMobileFooter.value) showMobileFooter.value = true;
 };
-
-// 暗黑模式
-const isDark = ref(false);
-const toggleDark = () => {
-  if (isDark.value) {
-    document.body.removeAttribute('arco-theme');
-  } else {
-    document.body.setAttribute('arco-theme', 'dark');
-  }
-  isDark.value = !isDark.value;
-};
+const { logo } = useLogo();
 </script>
 
 <template>
@@ -382,7 +372,7 @@ const toggleDark = () => {
           <img :src="userInfo?.avatar || defaultAvatar" />
         </div>
         <div class="logo" @click="goTop">
-          <img src="/images/logo.png" alt="" />
+          <img :src="logo" alt="" />
         </div>
         <div class="btn-handle">
           <nuxt-link class="nav-nuxt-link" style="font-size: 20px; color: rgb(var(--gray-6))" to="/search">
@@ -402,8 +392,8 @@ const toggleDark = () => {
     <div class="layout-container">
       <div class="menu-area">
         <div class="menu-panel">
-          <div class="menu-panel_logo" @click="toggleDark">
-            <img src="/images/logo.png" alt="" />
+          <div class="menu-panel_logo">
+            <img :src="logo" alt="" />
           </div>
           <div class="menu-routerlist">
             <template v-for="item in menuList">
@@ -626,7 +616,7 @@ const toggleDark = () => {
   position: fixed;
   top: 0;
   z-index: 20;
-  background: #fff;
+  background: var(--color-background);
   transition: all 0.2s ease-out;
   .nav-tab {
     width: 100%;
@@ -934,11 +924,11 @@ const toggleDark = () => {
   }
   .mobile-slide-content {
     .menu-panel_link {
-      padding-left: 0;
-      color: rgb(var(--gray-8));
+      padding-left: 10px;
+      color: var(--color-text-1);
       &-active {
-        color: #000;
-        background: #fff;
+        color: var(--color-text-1);
+        background: rgb(var(--gray-3));
       }
     }
     .menu-panel_divid {
