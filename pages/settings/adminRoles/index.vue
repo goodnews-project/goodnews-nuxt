@@ -113,8 +113,8 @@ const goAdminAccounts = (id: string) => {
     align-items: center;
 
     .btn {
-      background-color: #626aef;
-      color: white;
+      background-color: rgb(var(--primary-6));
+      color: var(--color-white);
     }
   }
 
@@ -123,10 +123,9 @@ const goAdminAccounts = (id: string) => {
   }
 
   .default {
-    background-color: #d9e1e8;
+    background-color: var(--color-fill-1);
     padding: 15px;
     margin-bottom: 40px;
-
     .default-top {
       margin-bottom: 8px;
       font-weight: bold;
@@ -137,11 +136,11 @@ const goAdminAccounts = (id: string) => {
   }
 
   .footer {
-    background-color: #d9e1e8;
+    background-color: var(--color-fill-1);
 
     .item {
       padding: 15px;
-      border-bottom: 1px solid #ccd7e0;
+      border-bottom: 1px solid var(--color-border-2);
 
       .item-top {
         font-weight: bold;
@@ -164,10 +163,6 @@ const goAdminAccounts = (id: string) => {
           font-size: 14px;
           font-weight: bold;
         }
-      }
-      .item-btn {
-        background-color: #626aef;
-        color: white;
       }
     }
   }

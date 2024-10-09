@@ -176,23 +176,23 @@ const goRouter = (path) => {
   .content-tips {
     font-size: 14px;
     line-height: 21px;
-    color: #282c37;
+    color: var(--color-text-1);
     margin-bottom: 20px;
   }
   h4 {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: #282c37;
+    color: var(--color-text-1);
     padding-bottom: 8px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #c0cdd9;
+    border-bottom: 1px solid var(--color-border-2);
   }
   hr {
     width: 100%;
     height: 0;
     border: 0;
-    border-bottom: 1px solid rgba(176, 192, 207, 0.6);
+    border-bottom: 1px solid var(--color-border-2);
     margin: 20px 0;
     &.spacer {
       height: 1px;
@@ -200,7 +200,7 @@ const goRouter = (path) => {
     }
   }
   h3 {
-    color: #282c37;
+    color: var(--color-text-1);
     font-size: 20px;
     line-height: 28px;
     font-weight: 400;
@@ -222,7 +222,7 @@ const goRouter = (path) => {
     .sparkline {
       display: block;
       text-decoration: none;
-      background: #ccd7e0;
+      background: var(--color-neutral-1);
       border-radius: 4px;
       position: relative;
       padding: 0 0 75px;
@@ -243,7 +243,7 @@ const goRouter = (path) => {
       .sparkline__label {
         padding: 0 20px 10px;
         text-transform: uppercase;
-        color: #282c37;
+        color: var(--color-text-1);
         font-weight: 500;
       }
       .sparkline__graph {
@@ -259,7 +259,7 @@ const goRouter = (path) => {
           fill-opacity: 1 !important;
         }
         path:last-child {
-          stroke: #1c1dff !important;
+          stroke: rgb(var(--primary-6)) !important;
           fill: none !important;
         }
       }
@@ -278,13 +278,13 @@ const goRouter = (path) => {
   }
   .dimension {
     .dimension__item {
-      border-bottom: 1px solid #ccd7e0;
+      border-bottom: 1px solid var(--color-border-2);
       .dimension__item__indicator {
         display: inline-block;
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: #6364ff;
+        background: rgb(var(--primary-6));
         margin-right: 10px;
         &.dimension__item__indicator--30 {
           background-color: rgba(99, 100, 255, 0.3);
@@ -292,11 +292,6 @@ const goRouter = (path) => {
       }
       .dimension__item__key {
         font-weight: 500;
-        padding: 11px 10px;
-      }
-      .dimension__item__value {
-        text-align: right;
-        color: #282c37;
         padding: 11px 10px;
       }
     }
@@ -315,11 +310,11 @@ const goRouter = (path) => {
         flex: 0 0 auto;
         width: 4px;
         height: 21px;
-        background: #c0cdd9;
+        background: var(--color-border-2);
         margin: 0 2px;
         border-radius: 2px;
         &.red {
-          background: #ff6363;
+          background: var(--color-danger-1);
         }
       }
     }

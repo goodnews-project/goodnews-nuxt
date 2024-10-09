@@ -12,7 +12,6 @@ const { t } = useI18n();
 const loginModalStore = useLoginModalStore();
 const modalStore = useModalStore();
 const notificationsNum = useNotificationsNum();
-
 const userInfo = getUser();
 watchEffect(async () => {
   if (!loginModalStore.$state.isShowLogin && getUser().value) {
@@ -362,6 +361,17 @@ const mobileFooterList = computed(() => {
 const backTopTarget = (e) => {
   if (!showMobileFooter.value) showMobileFooter.value = true;
 };
+
+// 暗黑模式
+const isDark = ref(false);
+const toggleDark = () => {
+  if (isDark.value) {
+    document.body.removeAttribute('arco-theme');
+  } else {
+    document.body.setAttribute('arco-theme', 'dark');
+  }
+  isDark.value = !isDark.value;
+};
 </script>
 
 <template>
@@ -392,7 +402,7 @@ const backTopTarget = (e) => {
     <div class="layout-container">
       <div class="menu-area">
         <div class="menu-panel">
-          <div class="menu-panel_logo">
+          <div class="menu-panel_logo" @click="toggleDark">
             <img src="/images/logo.png" alt="" />
           </div>
           <div class="menu-routerlist">
@@ -632,9 +642,7 @@ const backTopTarget = (e) => {
       align-items: center;
       justify-content: center;
       border-radius: 100px;
-      background: #ced6dc;
       font-size: 20px;
-      color: #697685;
       border-radius: 100px;
       overflow: hidden;
     }
@@ -662,7 +670,7 @@ const backTopTarget = (e) => {
     align-items: center;
     border-radius: 100px;
     &:active {
-      background: rgba(15, 20, 25, 0.1);
+      background: rgba(var(--gray-6-rgb), 0.1);
     }
   }
 }
@@ -741,7 +749,7 @@ const backTopTarget = (e) => {
           cursor: pointer;
 
           &:hover {
-            background-color: #f0f0f0;
+            background-color: var(--color-neutral-3);
           }
         }
       }
@@ -808,9 +816,9 @@ const backTopTarget = (e) => {
     width: 100%;
     display: flex;
     padding: 10px;
-    border-top: 1px solid #e3e3e3;
+    border-top: 1px solid var(--color-border-2);
     transition: all 0.2s ease-out;
-    background: #fff;
+    background: var(--color-background);
     z-index: 20;
   }
   .mobile-router-item {
@@ -893,9 +901,9 @@ const backTopTarget = (e) => {
       align-items: center;
       justify-content: center;
       border-radius: 100px;
-      background: #ced6dc;
+      background: var(--color-neutral-3);
       font-size: 24px;
-      color: #697685;
+      color: var(--color-text-2);
       border-radius: 100px;
       overflow: hidden;
     }
@@ -986,19 +994,17 @@ const backTopTarget = (e) => {
 .user-menu-basic {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
-  box-shadow: 0 4px 10px #0000001a;
-  border: 1px solid var(--color-fill-3);
+  border: 1px solid var(--color-border-2);
   border-radius: var(--border-radius-medium);
   padding: 4px 0;
-  background-color: #fff;
+  background-color: var(--color-background);
 
   .user-menu-item {
     padding: 10px;
     cursor: pointer;
 
     &:hover {
-      background-color: #f5f8fa;
+      background-color: var(--color-neutral-3);
     }
 
     & + .user-menu-item {
@@ -1075,6 +1081,7 @@ const backTopTarget = (e) => {
   padding-right: 80px;
   padding-left: 14px;
   font-size: 20px;
+  color: var(--color-text-1);
 }
 %menu-panel_link-icon {
   display: flex;
@@ -1088,11 +1095,11 @@ const backTopTarget = (e) => {
   right: -8px;
 }
 %menu-panel_link_hover {
-  background-color: #f0f0f0;
+  background-color: rgb(var(--gray-2));
 }
 
 %menu-panel_link-active {
-  background-color: #f0f0f0;
+  background-color: rgb(var(--gray-2));
   font-weight: bold;
 }
 </style>

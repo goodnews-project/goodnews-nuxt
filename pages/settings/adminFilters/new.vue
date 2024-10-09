@@ -178,7 +178,7 @@ const submitForm = () => {
         </a-button>
       </div>
     </a-form>
-    <a-button type="primary" :disabled="submitLoading" :loading="submitLoading" color="#626aef" @click="submitForm">
+    <a-button type="primary" :disabled="submitLoading" :loading="submitLoading" @click="submitForm">
       {{ $t('filter.addFilter.saveNew') }}
     </a-button>
   </div>

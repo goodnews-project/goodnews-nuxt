@@ -2,7 +2,7 @@
   <div class="right-plane">
     <SearchLayout />
     <StartPolymerizationPanel />
-    <!-- <AboutInstructions /> -->
+    <AboutInstructions />
   </div>
 </template>
 

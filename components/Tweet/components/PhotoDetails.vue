@@ -255,7 +255,7 @@ const renderAvatar = (attachment, isSmall = false) => {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #020617;
+    background-color: var(--color-text-1);
     position: relative;
 
     .close {
@@ -306,8 +306,7 @@ const renderAvatar = (attachment, isSmall = false) => {
           display: flex;
           align-items: center;
           overflow: hidden;
-          background: #020617;
-
+          background: #000000;
           .carousel-img {
             max-width: 80%;
             max-height: 80%;

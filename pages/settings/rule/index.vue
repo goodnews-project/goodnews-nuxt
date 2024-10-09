@@ -121,9 +121,6 @@ const handleCancel = async () => {
 </template>
 
 <style lang="scss" scoped>
-:deep(.arco-textarea) {
-  background: #fff;
-}
 :deep(.arco-form-item-label-col) {
   padding-right: 0;
 }
@@ -148,11 +145,11 @@ const handleCancel = async () => {
   .item-name {
     height: 20px;
     font-size: 16px;
-    color: #303133;
+    color: var(--color-text-1);
   }
   .item-desc {
     font-size: 12px;
-    color: #909399;
+    color: var(--color-text-2);
     margin-top: 4px;
   }
   .input-file {

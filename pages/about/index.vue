@@ -114,12 +114,12 @@ const renderImg = computed(() => {
   .title {
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: var(--color-text-1);
     margin-bottom: 20px;
   }
 
   .statistics-form {
-    --line-color: #c0cdd9;
+    --line-color: var(--color-border-2);
     display: flex;
     width: 100%;
     gap: 10px;
@@ -219,7 +219,7 @@ const renderImg = computed(() => {
         width: 2.5rem;
         height: 2.5rem;
         margin-right: 0.75rem;
-        background-color: #8c8dff;
+        background-color: rgb(var(--primary-6));
         border-radius: 50%;
 
         display: flex;

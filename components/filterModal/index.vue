@@ -153,7 +153,7 @@ const handleCreateFilter = async (filterVal) => {
     padding: 6px 10px;
     border-radius: 5px;
     &:hover {
-      background-color: #f0f0f0;
+      background-color: var(--color-neutral-1);
     }
   }
 }

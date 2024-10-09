@@ -254,10 +254,6 @@ const bannerChange = async (e) => {
 </template>
 
 <style lang="scss" scoped>
-:deep(.arco-input-wrapper) {
-  background: #fff;
-  border: 1px solid var(--color-neutral-4);
-}
 .tweetEditor {
   width: 100%;
   border: 1px solid var(--color-neutral-4);
@@ -270,60 +266,6 @@ const bannerChange = async (e) => {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-  @include respond('phone') {
-    .sidebar-wrapper {
-      display: none;
-    }
-  }
-  .sidebar-wrapper {
-    border-right: 1px solid #ebeef5;
-    .sidebar-wrapper__inner {
-      padding-left: 200px;
-      overflow-y: auto;
-      display: flex;
-      height: 100%;
-      justify-content: flex-end;
-      .sidebar {
-        padding: 0;
-        pointer-events: auto;
-        width: 240px;
-        .logo {
-          display: block;
-          height: 100px;
-          margin: 40px auto;
-          width: 100px;
-          border-radius: 10px;
-        }
-        .handle {
-          cursor: pointer;
-          --height: 50px;
-          height: var(--height);
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          transition: all 0.3s;
-          border-top-left-radius: 5px;
-          border-bottom-left-radius: 5px;
-          padding: 0 20px;
-          position: relative;
-          background: #f7f9f9;
-          &::after {
-            content: ' ';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 2px;
-            height: 100%;
-            background: #409eff;
-          }
-          .text {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
   .content-wrapper {
     flex: 1 1 auto;
     width: 100%;
@@ -382,17 +324,16 @@ const bannerChange = async (e) => {
   .item-name {
     height: 20px;
     font-size: 16px;
-    color: #303133;
   }
   .item-desc {
     font-size: 12px;
-    color: #909399;
+    color: var(--color-text-2);
     margin-top: 4px;
   }
 
   .item-desc-min {
     font-size: 12px;
-    color: #909399;
+    color: var(--color-text-2);
     margin-top: 4px;
     line-height: 12px;
   }

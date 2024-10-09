@@ -142,12 +142,6 @@ defineExpose({
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .loading-icon {
-    font-size: 30px;
-    text-align: center;
-    margin: 0 auto;
-    color: #1890ff;
-  }
   .accounts-null-list {
     display: flex;
     justify-content: start;

@@ -140,13 +140,13 @@ const historyList = ref(searchStore.history);
 .container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  background-color: #fff;
+  background-color: var(--color-background);
   .list {
     .type {
       .type-title {
         padding: 10px;
         font-size: 14px;
-        color: #999;
+        color: var(--color-text-2);
         display: flex;
         .removeAll {
           margin-left: auto;
@@ -161,7 +161,7 @@ const historyList = ref(searchStore.history);
         align-items: center;
         gap: 10px;
         &:hover {
-          background: #f5f5f5;
+          background: var(--color-neutral-2);
         }
         .search-icon {
           font-size: 18px;

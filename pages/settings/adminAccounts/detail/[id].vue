@@ -267,14 +267,7 @@ const goAccount = () => {
 }
 
 .content {
-  --bg-color: #f9fafb;
-
-  h2 {
-    color: #282c37;
-    font-size: 24px;
-    line-height: 36px;
-    font-weight: 700;
-  }
+  --bg-color: var(--color-fill-1);
 
   .display-name {
     display: block;
@@ -290,23 +283,6 @@ const goAccount = () => {
       text-decoration: none;
       color: inherit;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .card__img {
-      height: 130px;
-      position: relative;
-      background: #fff;
-      border-radius: 4px 4px 0 0;
-
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        -o-object-fit: cover;
-        object-fit: cover;
-        border-radius: 4px 4px 0 0;
-      }
     }
 
     .card__bar {
@@ -338,7 +314,7 @@ const goAccount = () => {
         span {
           display: block;
           font-size: 14px;
-          color: #282c37;
+          color: var(--color-text-1);
           font-weight: 400;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -361,8 +337,8 @@ const goAccount = () => {
     outline: 0;
     font-family: inherit;
     resize: vertical;
-    background: #f9fafb;
-    border: 1px solid #fff;
+    background: var(--color-fill-1);
+    border: 1px solid var(--color-border-2);
     border-radius: 4px;
     padding: 10px;
   }
@@ -370,7 +346,7 @@ const goAccount = () => {
   .content-tips {
     font-size: 14px;
     line-height: 21px;
-    color: #282c37;
+    color: var(--color-text-1);
     margin-bottom: 20px;
   }
 
@@ -378,10 +354,10 @@ const goAccount = () => {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: #282c37;
+    color: var(--color-text-1);
     padding-bottom: 8px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #c0cdd9;
+    border-bottom: 1px solid var(--color-border-2);
   }
 
   hr {
@@ -398,7 +374,7 @@ const goAccount = () => {
   }
 
   h3 {
-    color: #282c37;
+    color: var(--color-text-1);
     font-size: 20px;
     line-height: 28px;
     font-weight: 400;
@@ -414,62 +390,6 @@ const goAccount = () => {
     }
   }
 
-  .dashboard {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    grid-gap: 10px;
-    .sparkline {
-      display: block;
-      text-decoration: none;
-      background: #ccd7e0;
-      border-radius: 4px;
-      position: relative;
-      padding: 0 0 75px;
-      overflow: hidden;
-      .sparkline__value {
-        display: flex;
-        line-height: 33px;
-        align-items: flex-end;
-        padding: 20px 20px 10px;
-        .sparkline__value__total {
-          display: block;
-          margin-right: 10px;
-          font-weight: 500;
-          font-size: 28px;
-          color: #000;
-        }
-      }
-
-      .sparkline__label {
-        padding: 0 20px 10px;
-        text-transform: uppercase;
-        color: #282c37;
-        font-weight: 500;
-      }
-
-      .sparkline__graph {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-
-        svg {
-          display: block;
-          margin: 0;
-        }
-
-        path:first-child {
-          fill: rgba(58, 59, 255, 0.25) !important;
-          fill-opacity: 1 !important;
-        }
-
-        path:last-child {
-          stroke: #1c1dff !important;
-          fill: none !important;
-        }
-      }
-    }
-  }
-
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -477,7 +397,7 @@ const goAccount = () => {
 
     tbody tr td {
       padding: 10px;
-      border-bottom: 1px solid #ccd7e0;
+      border-bottom: 1px solid var(--color-border-2);
     }
   }
 }
@@ -485,18 +405,18 @@ const goAccount = () => {
 :deep(.arco-table-element) {
   .dimension {
     .dimension__item {
-      border-bottom: 1px solid #ccd7e0;
+      border-bottom: 1px solid var(--color-border-2);
 
       .dimension__item__indicator {
         display: inline-block;
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: #6364ff;
+        background: var(--primary-color);
         margin-right: 10px;
 
         &.dimension__item__indicator--30 {
-          background-color: rgba(99, 100, 255, 0.3);
+          background-color: rgba(var(--primary-color-rgb), 0.3);
         }
       }
 
@@ -507,7 +427,7 @@ const goAccount = () => {
 
       .dimension__item__value {
         text-align: right;
-        color: #282c37;
+        color: var(--color-text-1);
         padding: 11px 10px;
       }
     }
@@ -529,12 +449,12 @@ const goAccount = () => {
         flex: 0 0 auto;
         width: 4px;
         height: 21px;
-        background: #c0cdd9;
+        background: var(--color-border-2);
         margin: 0 2px;
         border-radius: 2px;
 
         &.red {
-          background: #ff6363;
+          background: var(--color-danger-1);
         }
       }
     }
