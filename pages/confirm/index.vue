@@ -45,12 +45,13 @@ watchEffect(() => {
     clearInterval(intervalId);
   }
 });
+const { logo } = useLogo();
 </script>
 
 <template>
   <div class="word-frame" v-show="!requesting">
     <div class="logo">
-      <img src="/images/logo.png" alt="" />
+      <img :src="logo" alt="" />
     </div>
     <h1>
       {{ isError ? t('register.activationLinkIncorrect') : t('register.emailVerifiedSuccess') }}

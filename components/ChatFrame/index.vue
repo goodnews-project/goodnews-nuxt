@@ -161,7 +161,7 @@ const onClickLeft = () => router.back();
             background-color: rgb(var(--arcoblue-6));
             border-radius: 50px;
             border-bottom-right-radius: 10px;
-            color: #fff;
+            color: var(--color-text-1);
           }
         }
       }

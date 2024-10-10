@@ -60,13 +60,14 @@ onMounted(async () => {
   await nextTick();
   openApp();
 });
+const { logo } = useLogo();
 </script>
 
 <template>
   <div class="pages">
     <div class="frame">
       <div class="logo">
-        <img src="/images/logo.png" alt="" />
+        <img :src="logo" alt="" />
       </div>
       <div class="frame-title">{{ t('login.changeYourPassword') }}</div>
       <div class="content">
