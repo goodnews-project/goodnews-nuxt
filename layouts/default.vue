@@ -650,6 +650,7 @@ const toggleDark = () => {
 
     .logo {
       height: 40px;
+      width: 160px;
       img {
         object-fit: contain;
       }
