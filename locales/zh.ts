@@ -699,6 +699,7 @@ export default {
   about: {
     title: '关于',
     siteRules: '站点规则',
+    github: 'Github',
     app: '{name} 应用',
     telegramGroup: '电报群',
     head: '关于 {systemName} - 由 PHP 驱动的 ActivityPub 去中心化社交媒体',
