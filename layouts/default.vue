@@ -608,6 +608,7 @@ const toggleDark = () => {
               </nuxt-link>
             </template>
           </div>
+          <AboutInstructions :showData="['version']"></AboutInstructions>
         </div>
       </a-drawer>
     </client-only>

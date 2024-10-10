@@ -710,6 +710,7 @@ export default {
   about: {
     title: 'About',
     siteRules: 'Site rules',
+    github: 'Github',
     app: '{name} app',
     telegramGroup: 'Telegram group',
     head: 'About {systemName} - PHP-driven ActivityPub decentralized social media.',

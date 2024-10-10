@@ -80,7 +80,7 @@ const renderImg = computed(() => {
       </a-collapse>
     </div>
     <div class="footer">
-      <AboutInstructions></AboutInstructions>
+      <AboutInstructions :showData="['github', 'version']"></AboutInstructions>
     </div>
   </div>
 </template>
@@ -235,7 +235,6 @@ const renderImg = computed(() => {
 }
 
 .footer {
-  display: none;
   text-align: center;
   margin-top: 10px;
 }

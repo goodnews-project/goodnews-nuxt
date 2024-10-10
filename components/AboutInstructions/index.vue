@@ -23,41 +23,56 @@
 
 <script setup>
 const { t } = useI18n();
-const linkList = ref([
-  {
+import { version } from '../../package.json';
+const props = defineProps({
+  showData: {
+    type: Array,
+    default: () => [],
+  },
+});
+const linkList = computed(() => {
+  const aboutData = {
     name: t('about.title'),
     link: '/about',
     showpoint: true,
     target: '',
-  },
-  {
-    name: t('about.app', 'Android'),
-    link: '/about',
+  };
+
+  const githubData = {
+    name: t('about.github'),
+    link: 'https://github.com/goodnews-project/goodnews-nuxt/',
     showpoint: true,
-    trigger: true,
-    triggerImgSrc:
-      'https://s3-alpha-sig.figma.com/img/95c9/430b/bed9b5851a1bce86c13dba48fd2b3eaf?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HF330jufllnPLyY3-SpBpqVDNd4TTrScrFeSmeTcq7v6KEj8Wg8V2daem5DswetLb0Jj-fzBlmURbUxqsXyJ02vGrFDJWJ-9ryQn8W3oyTLpwhflccAgjB95fHqWeV6q5rdfaDXVlXESfBdX53Zx-qJc9KZnSmRB-fsL2UtFP6TCpd4mBZOIXE0hS22GY7q8o-ftC63EqoKDKzKIO1U7SK8eq~YQlPqvT4~VdYp8AxQQGGyIP9uIciL-1K7bI~dYz~6d8YCnmEVOXey4apOdbI5wh0vHPq11a53wLazgHgnAL-ExPPOKTyWDyCw57PbA7drWtrf15chwk4QQABTUcQ__',
     target: '_blank',
-  },
-  {
-    name: t('about.app', 'iOS'),
-    link: '/about',
-    showpoint: true,
-    trigger: true,
-    triggerImgSrc:
-      'https://s3-alpha-sig.figma.com/img/95c9/430b/bed9b5851a1bce86c13dba48fd2b3eaf?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HF330jufllnPLyY3-SpBpqVDNd4TTrScrFeSmeTcq7v6KEj8Wg8V2daem5DswetLb0Jj-fzBlmURbUxqsXyJ02vGrFDJWJ-9ryQn8W3oyTLpwhflccAgjB95fHqWeV6q5rdfaDXVlXESfBdX53Zx-qJc9KZnSmRB-fsL2UtFP6TCpd4mBZOIXE0hS22GY7q8o-ftC63EqoKDKzKIO1U7SK8eq~YQlPqvT4~VdYp8AxQQGGyIP9uIciL-1K7bI~dYz~6d8YCnmEVOXey4apOdbI5wh0vHPq11a53wLazgHgnAL-ExPPOKTyWDyCw57PbA7drWtrf15chwk4QQABTUcQ__',
-    target: '_blank',
-  },
-  {
-    name: t('about.telegramGroup'),
-    link: '/about',
-    trigger: true,
+  };
+
+  const versionData = {
+    name: `v${version}`,
+    link: 'https://github.com/goodnews-project/goodnews-nuxt/releases',
     showpoint: false,
-    triggerImgSrc:
-      'https://s3-alpha-sig.figma.com/img/95c9/430b/bed9b5851a1bce86c13dba48fd2b3eaf?Expires=1724025600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HF330jufllnPLyY3-SpBpqVDNd4TTrScrFeSmeTcq7v6KEj8Wg8V2daem5DswetLb0Jj-fzBlmURbUxqsXyJ02vGrFDJWJ-9ryQn8W3oyTLpwhflccAgjB95fHqWeV6q5rdfaDXVlXESfBdX53Zx-qJc9KZnSmRB-fsL2UtFP6TCpd4mBZOIXE0hS22GY7q8o-ftC63EqoKDKzKIO1U7SK8eq~YQlPqvT4~VdYp8AxQQGGyIP9uIciL-1K7bI~dYz~6d8YCnmEVOXey4apOdbI5wh0vHPq11a53wLazgHgnAL-ExPPOKTyWDyCw57PbA7drWtrf15chwk4QQABTUcQ__',
     target: '_blank',
-  },
-]);
+  };
+
+  let result = [];
+
+  const keyMap = {
+    about: aboutData,
+    github: githubData,
+    version: versionData,
+  };
+  if (props.showData.length === 0) {
+    // 全要
+    result = Object.values(keyMap);
+  } else {
+    // 循环keyMap
+    Object.keys(keyMap).forEach((key) => {
+      if (props.showData.includes(key)) {
+        result.push(keyMap[key]);
+      }
+    });
+  }
+
+  return result;
+});
 </script>
 
 <style scoped lang="scss">
@@ -67,7 +82,7 @@ const linkList = ref([
 
   margin-top: auto;
   font-size: 14px;
-  color: var(--el-text-color-primary);
+  color: var(--color-neutral-6);
   padding-bottom: 24px;
   ul {
     display: flex;
