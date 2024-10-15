@@ -90,6 +90,7 @@ export default defineNuxtConfig({
     hookPrefix: 'Arco',
     locales: ['getLocale'],
     localePrefix: 'Arco',
+    theme: '@arco-themes/vue-good-news',
   },
 
   runtimeConfig: {
