@@ -710,6 +710,8 @@ export default {
   about: {
     title: 'About',
     siteRules: 'Site rules',
+    githubDesc: 'goodnews is a free and open source social platform,',
+    githubOrigin: 'Source code:',
     github: 'Github',
     app: '{name} app',
     telegramGroup: 'Telegram group',

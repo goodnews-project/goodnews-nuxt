@@ -699,6 +699,8 @@ export default {
   about: {
     title: '关于',
     siteRules: '站点规则',
+    githubDesc: 'goodnews 是一个免费且开源的社交平台，',
+    githubOrigin: '源代码：',
     github: 'Github',
     app: '{name} 应用',
     telegramGroup: '电报群',

@@ -1,23 +1,12 @@
 <template>
   <div class="link-footer">
-    <ul>
-      <li v-for="item in linkList">
-        <template v-if="item.trigger">
-          <a-trigger position="top" auto-fit-position :popup-translate="[0, -10]" scroll-to-close>
-            <nuxt-link :to="item.link" :target="item.target">{{ item.name }}</nuxt-link>
-            <template #content>
-              <div class="demo-basic">
-                <img :src="item.triggerImgSrc" />
-              </div>
-            </template>
-          </a-trigger>
-        </template>
-        <template v-if="!item.trigger">
-          <nuxt-link :to="item.link" :target="item.target">{{ item.name }}</nuxt-link>
-        </template>
+    <p class="link-footer-text">
+      <template v-for="item in linkList" :key="item.name">
+        <span v-if="item.tipText">{{ item.tipText }}</span>
+        <nuxt-link :to="item.link" :target="item.target">{{ item.name }}</nuxt-link>
         <span v-if="item.showpoint">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-      </li>
-    </ul>
+      </template>
+    </p>
   </div>
 </template>
 
@@ -29,7 +18,12 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  showDesc: {
+    type: Boolean,
+    default: false,
+  },
 });
+
 const linkList = computed(() => {
   const aboutData = {
     name: t('about.title'),
@@ -38,7 +32,12 @@ const linkList = computed(() => {
     target: '',
   };
 
+  const descData = {
+    tipText: t('about.githubDesc'),
+  };
+
   const githubData = {
+    tipText: props.showDesc ? t('about.githubOrigin') : '',
     name: t('about.github'),
     link: 'https://github.com/goodnews-project',
     showpoint: true,
@@ -55,6 +54,7 @@ const linkList = computed(() => {
   let result = [];
 
   const keyMap = {
+    desc: descData,
     about: aboutData,
     github: githubData,
     version: versionData,
@@ -84,20 +84,29 @@ const linkList = computed(() => {
   font-size: 14px;
   color: var(--color-neutral-6);
   padding-bottom: 24px;
-  ul {
+  .link-footer-text {
     display: flex;
-    li {
-      & + li {
-        position: relative;
-      }
-      a {
-        cursor: pointer;
-        &:hover {
-          text-decoration: underline;
-        }
+    flex-wrap: wrap;
+    a {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
+  // ul {
+  //   li {
+  //     & + li {
+  //       position: relative;
+  //     }
+  //     a {
+  //       cursor: pointer;
+  //       &:hover {
+  //         text-decoration: underline;
+  //       }
+  //     }
+  //   }
+  // }
 }
 .demo-basic {
   width: 140px;
