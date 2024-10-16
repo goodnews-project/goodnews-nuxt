@@ -365,12 +365,11 @@ const { stop } = useIntersectionObserver(tweetHtml, ([{ isIntersecting }]) => {
 <style lang="scss" scoped>
 .video-box {
   background: #000;
-  max-height: 500px;
   flex: 1;
-  height: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   video {
     height: 100%;
-    max-height: 500px;
   }
 }
 

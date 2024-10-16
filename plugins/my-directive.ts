@@ -94,15 +94,11 @@ export default defineNuxtPlugin((nuxtApp) => {
       if (!isImg) return;
       // 图片是否是竖直方向
       const isVertical = binding.value.width < binding.value.height;
-      // 如果图片是竖图，则设置高度为推文最大宽度的120%，同比例缩放宽度
+      // 如果图片是竖图，则设置高度最大为400px，宽度根据高度等比例缩放
       if (isVertical) {
-        // 给图片设置最大宽度和最大高度
-        const width = el.offsetWidth;
-        const maxHeight = width * 1;
-        // 高度设置为maxHeight 宽度等比例缩放
-        el.style.height = `${maxHeight}px`;
-        el.style.width = 'auto';
-        el.style['border-radius'] = '4px';
+        el.parentElement.style.maxHeight = '400px';
+        el.parentElement.style.maxWidth = '400px';
+        el.parentElement.style['border-radius'] = '4px';
         return;
       }
       // 正常图片，宽度
