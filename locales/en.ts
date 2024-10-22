@@ -168,6 +168,7 @@ export default {
     wordLimitExceeded: 'Word limit exceeded.',
     sendingTweet: 'Posting...',
     fileUploading: 'File is uploading...',
+    fileUploadFailed: 'File upload failed, please remove the failed file.',
     pleaseEnterAmount: 'Please enter the amount.',
     amountMustBeGreaterThanOne: 'The amount must be greater than {price}.',
     noContent: 'No content.',

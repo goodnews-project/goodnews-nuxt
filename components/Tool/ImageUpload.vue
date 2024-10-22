@@ -119,13 +119,16 @@ const beforeUpload = async (e) => {
         }
       };
 
-      xhr.onreadystatechange = function () {
+      xhr.onreadystatechange = function (a) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             handleUploadSuccess();
             resolve(JSON.parse(xhr.responseText));
           } else {
-            reject(new Error('Upload failed'));
+            const errorRes = JSON.parse(xhr.responseText);
+            const { msg } = errorRes;
+            Message.error(msg);
+            reject(new Error(msg));
           }
         }
       };
@@ -136,13 +139,11 @@ const beforeUpload = async (e) => {
 
   await upload(file, config)
     .then((data) => {
-      console.log('data=====', data);
       fileList.value[itemIndex].status = 'success';
       fileList.value[itemIndex].response = data;
       handleUploadSuccess();
     })
     .catch((error) => {
-      console.log('error=====', error);
       if (fileList.value[itemIndex]) {
         fileList.value[itemIndex].status = 'fail';
         handleUploadSuccess();

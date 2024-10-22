@@ -68,6 +68,9 @@ const sendTweetDisabledReason = computed(() => {
   if (loading.value) reason = t('tweet.sendingTweet');
   const isUploading = fileList.value.some((file) => file.status === 'pending');
   if (isUploading) reason = t('tweet.fileUploading');
+  // 文件全部上传成功
+  const isUploadFail = fileList.value.some((file) => file.status === 'fail');
+  if (isUploadFail) reason = t('tweet.fileUploadFailed');
   // 有效字符--过滤空格/换行/空字符&nbsp;
   const validContent = tweetContentText.value
     .replace(/&nbsp;/g, '')
