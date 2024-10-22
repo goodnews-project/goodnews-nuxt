@@ -167,6 +167,7 @@ export default {
     wordLimitExceeded: '字数超过限制',
     sendingTweet: '正在发帖',
     fileUploading: '文件正在上传中',
+    fileUploadFailed: '文件上传失败，请移除失败的文件',
     pleaseEnterAmount: '请输入金额',
     amountMustBeGreaterThanOne: '金额必须大于{price}',
     noContent: '没有内容',

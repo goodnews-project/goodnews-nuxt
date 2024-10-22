@@ -2,6 +2,7 @@ export const fileTypeMap = {
   'image/jpeg': 1,
   'image/png': 1,
   'image/gif': 1,
+  'image/webp': 1,
   'video/mp4': 4,
   'video/quicktime': 4,
 };

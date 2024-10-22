@@ -281,7 +281,7 @@ const { stop } = useIntersectionObserver(tweetHtml, ([{ isIntersecting }]) => {
       inertia
     >
       <template #content>
-        <div style="padding: 10px">
+        <div class="user-card-content">
           <UserCardContent v-if="triggerAccount" :account="triggerAccount"></UserCardContent>
         </div>
       </template>
@@ -389,6 +389,9 @@ const { stop } = useIntersectionObserver(tweetHtml, ([{ isIntersecting }]) => {
         text-decoration: underline;
       }
     }
+  }
+  .user-card-content {
+    padding: 10px;
   }
 }
 .showmore {
